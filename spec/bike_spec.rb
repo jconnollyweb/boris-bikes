@@ -6,3 +6,4 @@ describe Bike do
     expect(bike.working?).to eq('Bike working')
   end
 end
+

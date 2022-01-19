@@ -13,6 +13,10 @@ describe DockingStation do
     expect(docking_station.dock_bike('bike1')).to eq('bike docked')
   end
 
+  it "raises" do
+    expect { raise 'No bikes available' }.to raise_error 
+
 end
 
 # UNIT AND FEATURE TESTS ?????????
+# Bike.new ???????????
