@@ -1,12 +1,14 @@
+require "./lib/bike.rb"
+
 class DockingStation
-  attr_reader :bike
+  attr_reader :bikes
 
   def initialize
-    @bike = []
+    @bikes = []
   end
 
   def release_bike
-    'Bike released'
+    bike = Bike.new
   end
 
   def return_bike
@@ -14,7 +16,11 @@ class DockingStation
   end
 
   def dock_bike(bike)
-    @bike.push(bike)
+    @bikes.push(bike)
     'Bike docked'
   end
 end
+docking_station = DockingStation.new
+bike = docking_station.release_bike
+p docking_station.dock_bike(bike)
+p docking_station.bikes

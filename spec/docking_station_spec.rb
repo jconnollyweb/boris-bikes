@@ -2,7 +2,7 @@ require './lib/docking_station'
 describe DockingStation do
   it 'responds to release_bike' do
     docking_station = DockingStation.new
-    expect(docking_station.release_bike).to eq('Bike released')
+    expect(docking_station).to respond_to(:release_bike)
   end
   it "I can return bike I'have hired" do
     docking_station = DockingStation.new
